@@ -1,9 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const config = require('config');
-const db = config.get('mongoURI');
-
 const carsRoutes = require('./routes/cars-routes');
 const usersRoutes = require('./routes/users-routes');
 const listingsRoutes = require('./routes/listings-routes');
@@ -41,7 +38,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-	.connect(db)
+	.connect(process.env.mongoURI)
 	.then(() => {
 		console.log('MongoDB Connected...');
 		app.listen(process.env.PORT || 5000);

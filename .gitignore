@@ -2,6 +2,7 @@ node_modules/
 config/
 default.json
 seeds/
+nodemon.json
 
 # misc
 .DS_Store
