@@ -5,4 +5,4 @@ This is a repository for the backend code.
 
 # Demo
 
-Here is a working live demo:
+Here is a working live demo: https://autoshare-demo.firebaseapp.com/
